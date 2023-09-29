@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+    <div class="row">
+        <div class="col-md-3">
+            <!-- Barra lateral -->
+            <div class="list-group">
+                <a href="{% url 'emulator:mis_proyectos' %}" class="list-group-item list-group-item-action">Mis Proyectos</a>
+                <!-- Otras opciones de navegación pueden agregarse aquí -->
+            </div>
+        </div>
+        <div class="col-md-9">
+            <!-- Contenido principal -->
+            {% block main_content %}
+{% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}

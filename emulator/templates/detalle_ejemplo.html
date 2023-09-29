@@ -1,0 +1,10 @@
+{% extends "ejemplos.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Detalle del Ejemplo: {{ ejemplo.nombre }}</h2>
+    <p>{{ ejemplo.descripcion }}</p>
+    <pre>{{ ejemplo.contenido_xml }}</pre>
+</div>
+{% endblock %}

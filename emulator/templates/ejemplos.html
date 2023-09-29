@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Ejemplos</h2>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Selecciona un ejemplo
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            {% for ejemplo in ejemplos %}
+                <a class="dropdown-item" href="{% url 'emulator:detalle_ejemplo' ejemplo.id %}">{{ ejemplo.nombre }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
